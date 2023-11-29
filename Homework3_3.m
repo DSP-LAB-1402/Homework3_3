@@ -14,7 +14,7 @@ for i = 0
 end
 
 %% Homework2
-A
+
 w0 = pi * 0.15;
 n = [0:199; 200:399; 400:599];
 A = [2 4 0.5];
@@ -23,4 +23,9 @@ x = x';
 x = x';
 figure('Name', 'Cos');
 plot(x);
-y = [];
+lambda = 0.9;
+c0 = 0.5;
+rho = 0.2;
+b = 1 - lambda;
+a = [1 -lambda];
+cn = filter(b, a, x);
