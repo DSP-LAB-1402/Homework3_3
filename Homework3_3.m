@@ -236,3 +236,37 @@ xlim([0 600]);
 ylim([-2 2]);
 grid on;
 
+%% 3.3.c
+% Control Signal
+lambda = 0.9;
+c0 = 0.5;
+rho = 0.25;
+b = 1 - lambda;
+a = [1, -lambda];
+cn = filter(b, a, abs(x));
+
+% Gain Signal
+gn = ones(1, length(cn));
+gn(cn >= c0) = (cn(cn >= c0) / c0) .^ (rho - 1);
+yn = gn .* x;
+
+% Plot Signals
+% fig 3.6
+figure("Name", 'Input Signal vs Compressed Signal (3.6)');
+subplot(1, 2, 1);
+plot(n, x, 'LineWidth', 1.5);
+title('Input Signal');
+xlabel('n');
+ylabel('amplitude');
+xlim([0 600]);
+ylim([-5 5]);
+grid on;
+subplot(1, 2, 2);
+plot(n, yn, 'LineWidth', 1.5);
+title('Compressed Signal');
+xlabel('n');
+ylabel('amplitude');
+xlim([0 600]);
+ylim([-5 5]);
+grid on;
+
