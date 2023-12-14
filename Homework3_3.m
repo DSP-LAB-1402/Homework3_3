@@ -121,3 +121,22 @@ gn_smoothed = ones(1, length(cn_smoothed));
 gn_smoothed(cn_smoothed >= c0) = (cn_smoothed(cn_smoothed >= c0) / c0) .^ (rho - 1);
 yn_smoothed = gn_smoothed .* x;
 
+% fig 3.8
+figure('Name', 'Smoothed Output Signal vs Smoothed Gain Signal (3.8)');
+subplot(1, 2, 1);
+plot(n, yn_smoothed, 'LineWidth', 1.5);
+title('Smoothed Output Signal');
+xlabel('n');
+ylabel('amplitude');
+xlim([0 600]);
+ylim([-5 5]);
+grid on;
+subplot(1, 2, 2);
+plot(n, gn_smoothed, 'LineWidth', 1.5);
+title('Smoothed Gain Signal');
+xlabel('n');
+ylabel('amplitude');
+xlim([0 600]);
+ylim([-2 2]);
+grid on;
+
