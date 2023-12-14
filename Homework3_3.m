@@ -48,7 +48,7 @@ gn(cn >= c0) = (cn(cn >= c0) / c0) .^ (rho - 1);
 yn = gn .* x;
 
 %%%
-% fig 3.6
+% Fig 3.6
 figure('Name', 'Input Signal vs Compressed Signal');
 subplot(1, 2, 1)
 plot(n, x, 'LineWidth', 1.5);
@@ -107,7 +107,7 @@ ylim([0 1.2]);
 grid on;
 
 %%%
-% fig 3.7
+% Fig 3.7
 figure('Name', 'Contol Signal vs Gain Signal (3.7)');
 subplot(1, 2, 1);
 plot(n, cn, 'LineWidth', 1.5);
@@ -133,7 +133,7 @@ gn_smoothed(cn_smoothed >= c0) = (cn_smoothed(cn_smoothed >= c0) / c0) .^ (rho -
 yn_smoothed = gn_smoothed .* x;
 
 %%%
-% fig 3.8
+% Fig 3.8
 figure('Name', 'Smoothed Output Signal vs Smoothed Gain Signal (3.8)');
 subplot(1, 2, 1);
 plot(n, yn_smoothed, 'LineWidth', 1.5);
@@ -153,7 +153,7 @@ ylim([-2 2]);
 grid on;
 
 %%%
-% fig.3.9
+% Fig.3.9
 lambda = 0.1;
 c0 = 1.5;
 rho = 0.1;
@@ -186,7 +186,7 @@ ylim([-2 2]);
 grid on;
 
 %%%
-% fig 3.10
+% Fig 3.10
 lambda = 0.9;
 c0 = 0.5;
 rho = 2;
@@ -219,7 +219,7 @@ ylim([-2 2]);
 grid on;
 
 %%%
-% fig 3.11
+% Fig 3.11
 lambda = 0.1;
 c0 = 0.5;
 rho = 10;
@@ -270,7 +270,7 @@ yn = gn .* x;
 %%%
 % Plot Signals
 %
-% fig 3.6
+% Fig 3.6
 figure("Name", 'Input Signal vs Compressed Signal (3.6)');
 subplot(1, 2, 1);
 plot(n, x, 'LineWidth', 1.5);
@@ -290,7 +290,7 @@ ylim([-5 5]);
 grid on;
 
 %%%
-% fig 3.7
+% Fig 3.7
 figure('Name', 'Contol Signal vs Gain Signal (3.7)');
 subplot(1, 2, 1);
 plot(n, cn, 'LineWidth', 1.5);
@@ -328,7 +328,7 @@ yn = gn .* x;
 %%%
 % Plot Signals
 %
-% fig 3.6
+% Fig 3.6
 figure("Name", 'Input Signal vs Compressed Signal (3.6)');
 subplot(1, 2, 1);
 plot(n, x, 'LineWidth', 1.5);
@@ -348,7 +348,7 @@ ylim([-5 5]);
 grid on;
 
 %%%
-% fig 3.7
+% Fig 3.7
 figure('Name', 'Contol Signal vs Gain Signal (3.7)');
 subplot(1, 2, 1);
 plot(n, cn, 'LineWidth', 1.5);
